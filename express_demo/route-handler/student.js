@@ -54,8 +54,9 @@ router.put('/:id', (req, res) => {
 
 
 router.get('/', (req, res) => {
-
-    // res.send(students)
+    let template = swig.compileFile('htmls/student-list.html')
+    res.send(template({}))
+        // res.send(students)
 })
 
 ///:id

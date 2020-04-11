@@ -8,7 +8,16 @@
 </head>
 
 <body>
-    <h1>{{title}}</h1>
+    {% if !students %}
+    <h1>No Student in database</h1>
+    {% endif %}
+
+    <ul>
+        {% for s in students %}
+        <li>{{s.id}} : {{s.name}}</li>
+
+        {% endfor %}
+    </ul>
 </body>
 
 </html>
