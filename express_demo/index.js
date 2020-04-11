@@ -2,6 +2,7 @@ const express = require('express')
 const Joi = require('@hapi/joi');
 const app = express();
 var morgan = require('morgan')
+const swig = require('swig')
 
 
 const cookieParser = require('cookie-parser')
@@ -15,8 +16,8 @@ app.use(cookieParser())
 app.use(morgan("short"))
 
 app.get('/', (req, res) => {
-
-    res.send('Well come')
+    let result = swig.compileFile('htmls/student-list.html');
+    res.send(result({ title: 'My First Page' }));
 })
 
 const studentsRouter = require('./route-handler/student')

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const swig = require('swig')
 
 let students = [
     { name: "Mohan 1", id: 1 },
@@ -8,12 +9,6 @@ let students = [
     { name: "Student 4", id: 4 },
     { name: "Student 5", id: 5 },
 ]
-
-
-// /1
-
-
-
 router.get('/:id', (req, res) => {
     students.find((e) => {
         if (e.id == +req.params.id) {
@@ -60,7 +55,7 @@ router.put('/:id', (req, res) => {
 
 router.get('/', (req, res) => {
 
-    res.send(students)
+    // res.send(students)
 })
 
 ///:id
