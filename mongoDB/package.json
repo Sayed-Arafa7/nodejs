@@ -1,5 +1,5 @@
 {
-  "name": "express_demo",
+  "name": "mongoDB",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,11 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hapi/joi": "^17.1.1",
-    "cookie-parser": "^1.4.5",
-    "express": "^4.17.1",
-    "morgan": "^1.10.0",
-    "nodemon": "^1.10.0",
-    "swig": "^1.4.2"
+    "mongoose": "^5.9.15"
   }
 }
