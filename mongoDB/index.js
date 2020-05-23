@@ -34,4 +34,16 @@ async function createUser() {
 
 }
 
-createUser()
+async function getUsers() {
+    // const result = await User.find()
+    // const user = await User.findById('5ec78f2f6983b37254f7ad49')
+    const users = await User.find()
+        .sort({ name: -1 })
+        .limit(1)
+    console.log(users);
+
+}
+
+getUsers()
+
+// createUser();
